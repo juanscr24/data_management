@@ -1,4 +1,4 @@
-# Interactive Messaging System - JavaScript
+# Data Management - JavaScript
 
 **Author:** Juan Sebastian Cardona Rengifo  
 **Clan:** Cienaga
@@ -7,8 +7,7 @@
 
 ## Project Description
 
-This project is an interactive web application created with **HTML5**, **CSS3**, and **JavaScript (Vanilla)**, using **Vite** as the development environment. 
-It allows the user to enter their name and age. Upon clicking "Submit," a personalized message is displayed.
+Training where I put into practice the use of advanced data structures in JavaScript: objects, arrays, and maps. Through exercises and practical code, I apply my knowledge to efficiently organize, store, and manipulate data, I did a CRUD, always following good programming practices.
 
 Additionally, the project includes training focused on the use of **advanced data structures** in JavaScript: **objects**, **sets**, and **maps**.
 

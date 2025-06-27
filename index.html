@@ -23,8 +23,32 @@
 </head>
 
 <body>
-  <h1>Data Management</h1>
+  <header>
+    <!-- Page Name or title -->
+    <h1 href="">DATA MANAGEMENT</h1>
+  </header>
+  <main>
 
+    <!-- Form to submit new products -->
+    <form id="userForm">
+      <input type="text" id="product" placeholder="Product" required />
+      <input type="number" id="price" placeholder="Price" required />
+      <button type="submit" id="btn-save">Save</button>
+    </form>
+
+    <!-- Table that will have the CRUD products -->
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>PRODUCT</th>
+          <th>PRICE</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody id="userTableBody"></tbody>
+    </table>
+  </main>
   <script type="module" src="./src/js/main.js"></script>
 </body>
 
