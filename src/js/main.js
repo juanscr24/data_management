@@ -78,6 +78,8 @@ function saveProduct() {
         products.push(newProduct);
     }
 
+    $btnSave.textContent = 'Save'
+
     // The console will be clear
     console.clear();
     console.table(products);
@@ -120,23 +122,35 @@ window.editUser = function (id) {
         $product.value = product.product;
         $price.value = product.price;
         editingProductId = id;
+
+        $btnSave.textContent = 'Update'
     }
     console.clear();
     console.table(products);
 };
 
 // Function to delete products
-window.deleteUser = function (id) {
-    products = products.filter((p) => p.id !== id);
-    renderTable();
-
-    Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Product has been delete!",
-        showConfirmButton: false,
-        timer: 1000,
+window.deleteUser = async function (id) {
+    const result = await Swal.fire({
+        title: "Are you sure you want to delete?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
+        confirmButtonText: "Yes, delete it!",
+        cancelButtonText: "Cancel",
     });
-    console.clear();
-    console.table(products);
+
+    if (result.isConfirmed) {
+        products = products.filter((p) => p.id !== id);
+        renderTable();
+
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Product has been deleted!",
+            showConfirmButton: false,
+            timer: 1500,
+        });
+    }
 };
